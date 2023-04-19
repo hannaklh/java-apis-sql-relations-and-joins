@@ -49,11 +49,9 @@ Look at the data shown below as a single monolithic table.
 ## Extension Task 1
 
 1. Refactor the database tables so that the Actors, Directors and Writers all identify people (using a Foreign Key) that are present in a single People table
+2. Where necessary refactor the queries to take advantage of this new structure
 
 ## Extension Task 2
 
-1. Where necessary refactor the queries to take advantage of this new structure
-
-## Extension Task 3
-
 1. Add a `Cast` table that links Films to Actors (ie the Cast table contains details of all of the Actors in addition to the Star who appear in the Film).
+2. You can either add some more people as actors (these can be real actors or just made up names) or just reuse all of the existing people.
