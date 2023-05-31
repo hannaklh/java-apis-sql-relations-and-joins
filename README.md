@@ -44,7 +44,7 @@ Look at the data shown below as a single monolithic table.
    5. Show directors and film titles for films with a score of 8 or higher
    6. Make at least 5 more queries to demonstrate your understanding of joins, and other relationships between tables.
 
-7. Save each query in its own file and then once you have completed them all push the repository back up to GitHub and create a Pull Request as normal.
+7. You can save each of the queries to a separate file or all of them in one file, either one will work.
 
 ## Extension Task 1
 
