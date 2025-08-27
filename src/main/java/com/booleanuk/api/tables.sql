@@ -1,0 +1,32 @@
+CREATE TABLE IF NOT EXISTS directors (
+id integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+name VARCHAR(64) NULL UNIQUE,
+country VARCHAR(128) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS stars (
+id integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+name VARCHAR(64) NULL UNIQUE,
+date_of_birth DATE NOT NULL
+);
+CREATE TABLE IF NOT EXISTS writers (
+id integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+name VARCHAR(64) NULL UNIQUE,
+email VARCHAR(128) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS films (
+id integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+directorsId integer NOT NULL,
+starsId integer NOT NULL,
+writersId integer not null,
+title VARCHAR(128) NOT NULL UNIQUE,
+genre VARCHAR(64) NOT NULL,
+release_year integer NOT NULL,
+rating integer NOT NULL,
+CONSTRAINT fk_director FOREIGN KEY (directorsId) REFERENCES directors(id),
+CONSTRAINT fk_star FOREIGN KEY (starsId) REFERENCES stars(id),
+CONSTRAINT fk_writer FOREIGN KEY (writersId) REFERENCES writers(id)
+);
+
+--populate tables
